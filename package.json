@@ -4,11 +4,13 @@
   "description": "This is a repository for jest practice.",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "8.17.0",
     "jest": "^24.9.0"
   },
   "repository": {
