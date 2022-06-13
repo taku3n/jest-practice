@@ -1,25 +1,20 @@
 const toFizzBuzz = require("./modules/fizzbuzz");
+const isLaterDatetime = require("./modules/is-later-datetime");
 
 // FizzBuzz判定の結果をコンソールログに書き出す
-const app = () => {
+const outputFizzBuzz = () => {
   for (let i = 1; i <= 100; i++) {
     console.log(toFizzBuzz(i));
   }
 };
 
-// 引数のDatetimeを比較しどちらが先かの判定結果をコンソールログに書き出す
-const compareDatetime = () => {
+// Datetimeを比較しどちらが先かの判定結果をコンソールログに書き出す
+const outputLaterDatetime = () => {
   var date1 = new Date("2022/06/13");
   var date2 = new Date("2022/06/11");
 
-  if (date1.getTime() === date2.getTime()) {
-    console.log("同じ日付です");
-  } else if (date1 > date2) {
-    console.log("date1の方が先の日付です");
-  } else if (date1 < date2) {
-    console.log("date2の方が先の日付です");
-  }
+  console.log(isLaterDatetime(date1, date2));
 };
 
-module.exports = app;
-module.exports = compareDatetime;
+module.exports = outputFizzBuzz;
+module.exports = outputLaterDatetime;
